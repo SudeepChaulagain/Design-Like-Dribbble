@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return response()->json(['msg'=>'Hello Sudeep!'], 200);
+//Public routes
+
+//Routes for authenticated users only
+Route::group(['middleware' =>['auth:api']], function(){
+
+});
+
+//Routes for guest only
+Route::group(['middleware'=>['guest:api']], function(){
+    Route::post('register', 'Auth\RegisterController@register');
 });

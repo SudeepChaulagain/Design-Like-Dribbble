@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f47d86080914012abc4738201937e858",
+    "content-hash": "cb7b65c1e788bd2b9bd3d52e9adb81e5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -598,6 +598,170 @@
             "time": "2020-10-22T13:57:20+00:00"
         },
         {
+            "name": "geo-io/interface",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geo-io/interface.git",
+                "reference": "cf46fe7b013de20ab8b601238c7d91b480810644"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geo-io/interface/zipball/cf46fe7b013de20ab8b601238c7d91b480810644",
+                "reference": "cf46fe7b013de20ab8b601238c7d91b480810644",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeoIO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "Geo I/O base interfaces.",
+            "keywords": [
+                "geo",
+                "geometry",
+                "io"
+            ],
+            "support": {
+                "issues": "https://github.com/geo-io/interface/issues",
+                "source": "https://github.com/geo-io/interface/tree/v1.0.1"
+            },
+            "time": "2016-07-28T07:17:02+00:00"
+        },
+        {
+            "name": "geo-io/wkb-parser",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geo-io/wkb-parser.git",
+                "reference": "cceee8f4e8b2058f3f1a0372c930140f23fe1ee1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geo-io/wkb-parser/zipball/cceee8f4e8b2058f3f1a0372c930140f23fe1ee1",
+                "reference": "cceee8f4e8b2058f3f1a0372c930140f23fe1ee1",
+                "shasum": ""
+            },
+            "require": {
+                "geo-io/interface": "~1.0",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GeoIO\\WKB\\Parser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "Well-known binary (WKB) Parser.",
+            "keywords": [
+                "geo",
+                "geometry",
+                "io",
+                "parser",
+                "wkb"
+            ],
+            "support": {
+                "issues": "https://github.com/geo-io/wkb-parser/issues",
+                "source": "https://github.com/geo-io/wkb-parser/tree/master"
+            },
+            "time": "2015-06-30T04:19:13+00:00"
+        },
+        {
+            "name": "grimzy/laravel-mysql-spatial",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/grimzy/laravel-mysql-spatial.git",
+                "reference": "49b0daf1e6fc730eaf82269972f324be7dea7efb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/grimzy/laravel-mysql-spatial/zipball/49b0daf1e6fc730eaf82269972f324be7dea7efb",
+                "reference": "49b0daf1e6fc730eaf82269972f324be7dea7efb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "geo-io/wkb-parser": "^1.0",
+                "illuminate/database": "^5.2|^6.0|^7.0",
+                "jmikola/geojson": "^1.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5",
+                "laravel/browser-kit-testing": "^2.0",
+                "laravel/laravel": "^5.2|^6.0|^7.0",
+                "mockery/mockery": "^0.9.9",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "~4.8|~5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Grimzy\\LaravelMysqlSpatial\\SpatialServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Grimzy\\LaravelMysqlSpatial\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joseph Estefane",
+                    "email": "estefanejoe@gmail.com"
+                }
+            ],
+            "description": "MySQL spatial data types extension for Laravel.",
+            "support": {
+                "issues": "https://github.com/grimzy/laravel-mysql-spatial/issues",
+                "source": "https://github.com/grimzy/laravel-mysql-spatial/tree/master"
+            },
+            "time": "2020-04-14T03:13:36+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "7.3.0",
             "source": {
@@ -831,6 +995,63 @@
             "time": "2021-03-21T16:25:00+00:00"
         },
         {
+            "name": "jmikola/geojson",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmikola/geojson.git",
+                "reference": "6ec3016cc0215667b7775f6ead7bd0337ad66eee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmikola/geojson/zipball/6ec3016cc0215667b7775f6ead7bd0337ad66eee",
+                "reference": "6ec3016cc0215667b7775f6ead7bd0337ad66eee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "GeoJson\\": "src/"
+                },
+                "classmap": [
+                    "stubs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                }
+            ],
+            "description": "GeoJSON implementation for PHP",
+            "homepage": "https://github.com/jmikola/geojson",
+            "keywords": [
+                "geo",
+                "geojson",
+                "geospatial"
+            ],
+            "support": {
+                "issues": "https://github.com/jmikola/geojson/issues",
+                "source": "https://github.com/jmikola/geojson/tree/master"
+            },
+            "time": "2015-09-27T15:35:21+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.30.4",
             "source": {
@@ -1059,6 +1280,61 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.6.1"
             },
             "time": "2021-03-02T16:53:12+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/d01a705763c243b07be795e9d1bb47f89260f73d",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/ui/issues",
+                "source": "https://github.com/laravel/ui/tree/v2.5.0"
+            },
+            "time": "2020-11-03T19:45:19+00:00"
         },
         {
             "name": "lcobucci/jwt",
