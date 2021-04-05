@@ -29,7 +29,7 @@ class VerificationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('signed')->only('verify');
+        // $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
 
@@ -38,7 +38,7 @@ class VerificationController extends Controller
         //check if the url is a valid signed url
         if (! URL::hasValidSignature($request)) {
             return response()->json([ "errors"=>[
-                "message" => "Invalid verification link"
+                "message" => "Invalid verification link or signature"
             ]], 422);
         }
 
